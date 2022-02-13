@@ -1,18 +1,9 @@
+import "./plugins/bootstrap-vue";
+import "@babel/polyfill";
+import "mutationobserver-shim";
+import "./plugins/bootstrap-vue";
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-import Vue from "vue";
-import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
-import { Bootstrap } from "bootstrap";
-
-// Import Bootstrap an BootstrapVue CSS files (order is important)
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
-
-// Make BootstrapVue available throughout your project
-Vue.use(BootstrapVue);
-Vue.use(Bootstrap);
-// Optionally install the BootstrapVue icon components plugin
-Vue.use(IconsPlugin);
 
 createApp(App).use(router).mount("#app");
